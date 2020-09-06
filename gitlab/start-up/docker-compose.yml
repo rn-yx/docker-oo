@@ -1,0 +1,19 @@
+version: "3.6"
+services:
+ gitlab:
+   image: gitlab/gitlab-ce
+   container_name: gitlab
+   restart: always
+   hostname: 192.168.211.130
+   environment:
+     GITLAB_OMNIBUS_CONFIG: |
+       # 配置http协议所使用的访问地址,不加端口号默认为80
+       external_url "http://192.168.211.130"
+   ports:
+     - '80:80'
+     - '2222:22'
+     - '443:443'
+   volumes:
+     - ../config:/etc/gitlab
+     - ../logs:/var/log/gitlab
+     - ../data:/var/opt/gitlab

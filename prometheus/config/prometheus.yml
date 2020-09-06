@@ -1,0 +1,21 @@
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets:
+        #- altermanager:9093   #设置altermanager的地址，后文会写到安装altermanager
+rule_files:
+  - "first_rules.yml"   # 设置报警规则
+  # - "second_rules.yml"
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ['localhost:9090']   #这个自带的默认监控prometheus所在机器的prometheus状态
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['192.168.125.183:8080']

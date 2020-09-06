@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.8-rc
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ../data:/var/lib/rabbitmq
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+    environment:
+      - RABBITMQ_DEFAULT_USER=rn
+      - RABBITMQ_DEFAULT_PASS=rn1234

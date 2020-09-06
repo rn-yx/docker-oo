@@ -1,0 +1,13 @@
+version: "3.6"
+services:
+  jenkins:
+    image: jenkins/jenkins 
+    container_name: myjenkins
+    external_links:
+      - gitlab:gitlab.hibiscus.com 
+    restart: always
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+      - ../jenkins_home:/var/jenkins_home

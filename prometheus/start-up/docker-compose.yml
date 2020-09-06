@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.14.0
+    container_name: prometheus
+    restart: always
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../data/prometheus:/prometheus   #prometheus数据目录
+      - ../config/prometheus.yml:/etc/prometheus/prometheus.yml   #prometheus配置文件
+      - ../config/first_rules.yml:/etc/prometheus/first_rules.yml   #报警配置文件
+    command: --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus --web.console.libraries=/usr/share/prometheus/console_libraries  --web.console.templates=/usr/share/prometheus/consoles --web.external-url=http://192.168.125.183:9090    #重写了启动的配置参数，其中web.external-url配置访问prometheus地址是为了在报警邮件里面点击直接到prometheus的web界面

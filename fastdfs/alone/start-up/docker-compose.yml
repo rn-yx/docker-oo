@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  fastdfs-tracker:
+    image: season/fastdfs:1.2
+    container_name: fastdfs-tracker
+    restart: always
+    volumes:
+      - ../tracker_data:/fastdfs/tracker/data
+    network_mode: "host"
+    command: "tracker"
+
+  fastdfs-storage:
+    image: season/fastdfs:1.2
+    container_name: fastdfs-storage
+    restart: always
+    volumes:
+      - ../conf:/fdfs_conf
+      - ../storage_data:/fastdfs/tracker/data
+      - ../store_path:/fastdfs/store_path
+    environment:
+      - TRACKER_SERVER=192.168.125.14:22122
+      - TZ=Asia/Shanghai
+    network_mode: "host"
+    command: "storage"
+
+  fastdfs-nginx:
+    image: season/fastdfs:1.2
+    container_name: fastdfs-nginx
+    restart: always
+    volumes:
+      - ../conf/nginx.conf:/etc/nginx/conf/nginx.conf
+      - ../store_path:/fastdfs/store_path
+    environment:
+      - TRACKER_SERVER=192.168.125.14:22122
+      - TZ=Asia/Shanghai
+    network_mode: "host"
+    command: "nginx"

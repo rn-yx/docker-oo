@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  fastdfs:
+    image: sigod/fastdfs:5.11
+    container_name: fastdfs
+    restart: always
+    environment:
+      # nginx服务端口
+      #- WEB_PORT=8888
+      # docker所在主机的IP地址
+      - IP=192.168.125.123
+    ports:
+      - 22122:22122
+      - 23000:23000
+      - 8888:8888
+    volumes:
+      - ../data:/var/local/fdfs
+    # 使docker具有root权限以读写主机上的目录
+    privileged: true
+    # 网络模式为host，即直接使用主机的网络接口
+    network_mode: "host"
