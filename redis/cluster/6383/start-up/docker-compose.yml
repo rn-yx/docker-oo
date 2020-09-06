@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+ redis:
+  image: redis:5.0.9
+  container_name: redis-6383
+  restart: always
+  ports:
+    - 6383:6383   # redis的服务端口
+    - 16383:16383 # redis集群监控端口
+  volumes:
+    - ../data:/data
+    - ../conf/redis.conf:/usr/local/etc/redis/redis.conf
+    - /etc/localtime:/etc/localtime:ro
+  command: redis-server /usr/local/etc/redis/redis.conf
+
