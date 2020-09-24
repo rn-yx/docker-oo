@@ -10,4 +10,3 @@ services:
       - ../data/mysql:/var/lib/mysql
       - ../conf/my.cnf:/etc/my.cnf
       - ../init:/docker-entrypoint-initdb.d/
-

@@ -1,0 +1,16 @@
+version: '3.6'
+services:
+  mysql-slave:
+    image: 'mysql:5.7.31'
+    container_name: mysql-slave
+    restart: always
+    ports:
+      - '3307:3306'
+    volumes:
+      - ../data:/var/lib/mysql
+      - ../conf/my.cnf:/etc/my.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sample
+      MYSQL_USER: rn
+      MYSQL_PASSWORD: rn1234
