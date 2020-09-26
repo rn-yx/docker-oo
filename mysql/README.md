@@ -14,7 +14,7 @@
 
 ## 主从集群实战
 ### 修改配置
-分别修改master、slave的配置文件my.cnf。请前往https://www.cnblogs.com/qianniao12/p/8011222.html了解更多参数配置信。
+分别修改master、slave的配置文件my.cnf。[点击这里](https://www.cnblogs.com/qianniao12/p/8011222.html)了解更多参数配置信。
 
 * master配置
 ```properties
