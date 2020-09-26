@@ -1,8 +1,8 @@
 version: '3.6'
 services:
-  mysql-sample:
+  mysql-master:
     image: 'mysql:5.7.31'
-    container_name: mysql-sample
+    container_name: mysql-master
     restart: always
     ports:
       - '3306:3306'
