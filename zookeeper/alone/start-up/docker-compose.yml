@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  zk:
+    image: zookeeper:3.6.2
+    restart: always
+    container_name: zk
+    ports:
+      - "2181:2181"
+    volumes:
+      - "../data/zk/data:/data"
+      - "../data/zk/datalog:/datalog"
