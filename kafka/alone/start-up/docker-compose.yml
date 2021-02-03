@@ -15,5 +15,5 @@ services:
       - KAFKA_ZOOKEEPER_CONNECT=192.168.125.131:2181
       - JMX_PORT=9999
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
       - "../data/kafka1/:/kafka"
+      - "/var/run/docker.sock:/var/run/docker.sock"

@@ -1,0 +1,147 @@
+2021-02-02 10:57:39.573 [main] INFO  cn.mrray.raybaas.ca.CaApplication Starting CaApplication on DESKTOP-U9QBKJS with PID 8848 (D:\IDEA_J\raychain\raybaas-ca\raybaas-ca-portal\target\classes started by Admin in D:\IDEA_J\raychain)
+2021-02-02 10:57:39.576 [main] INFO  cn.mrray.raybaas.ca.CaApplication No active profile set, falling back to default profiles: default
+2021-02-02 10:57:41.301 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-02 10:57:41.492 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 181ms. Found 14 repository interfaces.
+2021-02-02 10:57:42.162 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$47cea68f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-02 10:57:42.731 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+2021-02-02 10:57:42.764 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-02 10:57:42.778 [main] INFO  org.apache.catalina.core.StandardService Starting service [Tomcat]
+2021-02-02 10:57:42.778 [main] INFO  org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.16]
+2021-02-02 10:57:42.789 [main] INFO  org.apache.catalina.core.AprLifecycleListener The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\SoftEnv\mysql-5.7.19-winx64\bin;D:\apache-maven-3.6.0\bin;C:\Program Files (x86)\Java\jdk1.8.0_211\bin;C:\Program Files (x86)\Java\jdk1.8.0_211\jre\bin;C:\Program Files\nodejs\;E:\VanDyke Software\Clients\;D:\Python39;D:\Python39\Scripts;D:\Python39\Scripts\;D:\Python39\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm 2019.1.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin;;C:\Users\Admin\AppData\Roaming\npm;C:\Program Files (x86)\Calibre2;;.]
+2021-02-02 10:57:43.193 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2021-02-02 10:57:43.194 [main] INFO  org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 3437 ms
+2021-02-02 10:57:43.611 [main] INFO  org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-02-02 10:57:43.742 [main] INFO  org.hibernate.Version HHH000412: Hibernate Core {5.3.7.Final}
+2021-02-02 10:57:43.745 [main] INFO  org.hibernate.cfg.Environment HHH000206: hibernate.properties not found
+2021-02-02 10:57:44.035 [main] INFO  org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-02-02 10:57:44.295 [main] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2021-02-02 10:57:44.495 [main] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2021-02-02 10:57:44.513 [main] INFO  org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-02 10:57:46.356 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 10:57:47.595 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator HHH000397: Using ASTQueryTranslatorFactory
+2021-02-02 10:57:49.247 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-02-02 10:57:49.480 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-02 10:57:49.823 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+2021-02-02 10:57:49.850 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+2021-02-02 10:57:50.020 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+2021-02-02 10:57:50.517 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: addUsingPOST_1
+2021-02-02 10:57:50.542 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: deleteAppUsingPOST_1
+2021-02-02 10:57:50.613 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: disableUsingPOST_1
+2021-02-02 10:57:50.617 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: getDisableStatusUsingGET_1
+2021-02-02 10:57:50.650 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: addUsingPOST_2
+2021-02-02 10:57:50.654 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: disableUsingPOST_2
+2021-02-02 10:57:50.656 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: findContractsUsingGET_1
+2021-02-02 10:57:50.719 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+2021-02-02 10:57:50.771 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-02 10:57:50.775 [main] INFO  cn.mrray.raybaas.ca.CaApplication Started CaApplication in 13.129 seconds (JVM running for 15.039)
+2021-02-02 10:57:50.782 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [生成根证书---------------------]
+2021-02-02 10:57:51.013 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [生成RayBaas证书、Origin-SDK证书---------------------]
+2021-02-02 10:57:52.903 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [初始化http安全校验证书-----------------------]
+2021-02-02 10:57:52.908 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [CA初始化完成---------------------]
+2021-02-02 10:58:48.609 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-02 10:58:48.610 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2021-02-02 10:58:48.625 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Completed initialization in 15 ms
+2021-02-02 11:12:47.822 [Thread-27] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-02 11:12:47.828 [Thread-27] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 11:12:47.830 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+2021-02-02 11:12:47.837 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+2021-02-02 11:12:55.894 [main] INFO  cn.mrray.raybaas.ca.CaApplication Starting CaApplication on DESKTOP-U9QBKJS with PID 14148 (D:\IDEA_J\raychain\raybaas-ca\raybaas-ca-portal\target\classes started by Admin in D:\IDEA_J\raychain)
+2021-02-02 11:12:55.895 [main] INFO  cn.mrray.raybaas.ca.CaApplication No active profile set, falling back to default profiles: default
+2021-02-02 11:12:57.139 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-02 11:12:57.275 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 128ms. Found 14 repository interfaces.
+2021-02-02 11:12:57.720 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b3acea5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-02 11:12:58.104 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+2021-02-02 11:12:58.119 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-02 11:12:58.127 [main] INFO  org.apache.catalina.core.StandardService Starting service [Tomcat]
+2021-02-02 11:12:58.127 [main] INFO  org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.16]
+2021-02-02 11:12:58.133 [main] INFO  org.apache.catalina.core.AprLifecycleListener The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\SoftEnv\mysql-5.7.19-winx64\bin;D:\apache-maven-3.6.0\bin;C:\Program Files (x86)\Java\jdk1.8.0_211\bin;C:\Program Files (x86)\Java\jdk1.8.0_211\jre\bin;C:\Program Files\nodejs\;E:\VanDyke Software\Clients\;D:\Python39;D:\Python39\Scripts;D:\Python39\Scripts\;D:\Python39\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm 2019.1.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin;;C:\Users\Admin\AppData\Roaming\npm;C:\Program Files (x86)\Calibre2;;.]
+2021-02-02 11:12:58.463 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2021-02-02 11:12:58.464 [main] INFO  org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 2453 ms
+2021-02-02 11:12:58.675 [main] INFO  org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-02-02 11:12:58.790 [main] INFO  org.hibernate.Version HHH000412: Hibernate Core {5.3.7.Final}
+2021-02-02 11:12:58.793 [main] INFO  org.hibernate.cfg.Environment HHH000206: hibernate.properties not found
+2021-02-02 11:12:58.965 [main] INFO  org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-02-02 11:12:59.123 [main] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2021-02-02 11:12:59.389 [main] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2021-02-02 11:12:59.404 [main] INFO  org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-02 11:13:00.564 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 11:13:01.640 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator HHH000397: Using ASTQueryTranslatorFactory
+2021-02-02 11:13:02.699 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-02-02 11:13:02.904 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-02 11:13:03.134 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+2021-02-02 11:13:03.154 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+2021-02-02 11:13:03.187 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+2021-02-02 11:13:03.406 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: addUsingPOST_1
+2021-02-02 11:13:03.419 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: deleteAppUsingPOST_1
+2021-02-02 11:13:03.466 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: disableUsingPOST_1
+2021-02-02 11:13:03.469 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: getDisableStatusUsingGET_1
+2021-02-02 11:13:03.489 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: addUsingPOST_2
+2021-02-02 11:13:03.496 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: disableUsingPOST_2
+2021-02-02 11:13:03.498 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: findContractsUsingGET_1
+2021-02-02 11:13:03.533 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+2021-02-02 11:13:03.565 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-02 11:13:03.567 [main] INFO  cn.mrray.raybaas.ca.CaApplication Started CaApplication in 8.943 seconds (JVM running for 10.162)
+2021-02-02 11:13:03.571 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [生成根证书---------------------]
+2021-02-02 11:13:03.749 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [生成RayBaas证书、Origin-SDK证书---------------------]
+2021-02-02 11:13:03.803 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [初始化http安全校验证书-----------------------]
+2021-02-02 11:13:03.811 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [CA初始化完成---------------------]
+2021-02-02 11:13:18.948 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-02 11:13:18.948 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2021-02-02 11:13:18.958 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Completed initialization in 10 ms
+2021-02-02 12:13:02.101 [CONFIG_SCHEDULE_THREAD-thread-15] INFO  cn.mrray.raybaas.ca.utils.LicenseUtils =======开始加载License信息=======
+2021-02-02 12:13:02.102 [CONFIG_SCHEDULE_THREAD-thread-15] INFO  cn.mrray.raybaas.ca.utils.LicenseUtils License当前状态:license check success
+2021-02-02 12:13:02.169 [CONFIG_SCHEDULE_THREAD-thread-15] INFO  cn.mrray.raybaas.ca.utils.LicenseUtils License起始日期:2021-01-19 08:00:00
+2021-02-02 12:13:02.169 [CONFIG_SCHEDULE_THREAD-thread-15] INFO  cn.mrray.raybaas.ca.utils.LicenseUtils License过期日期:2022-01-19 08:00:00
+2021-02-02 14:18:35.637 [Thread-19] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-02 14:18:35.648 [Thread-19] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 14:18:35.656 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+2021-02-02 14:18:35.662 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+2021-02-02 14:18:52.770 [main] INFO  cn.mrray.raybaas.ca.CaApplication Starting CaApplication on DESKTOP-U9QBKJS with PID 14436 (D:\IDEA_J\raychain\raybaas-ca\raybaas-ca-portal\target\classes started by Admin in D:\IDEA_J\raychain)
+2021-02-02 14:18:52.773 [main] INFO  cn.mrray.raybaas.ca.CaApplication No active profile set, falling back to default profiles: default
+2021-02-02 14:18:54.685 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-02 14:18:54.875 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 180ms. Found 14 repository interfaces.
+2021-02-02 14:18:55.510 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c055060d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-02 14:18:56.099 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+2021-02-02 14:18:56.118 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-02 14:18:56.128 [main] INFO  org.apache.catalina.core.StandardService Starting service [Tomcat]
+2021-02-02 14:18:56.129 [main] INFO  org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.16]
+2021-02-02 14:18:56.137 [main] INFO  org.apache.catalina.core.AprLifecycleListener The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\SoftEnv\mysql-5.7.19-winx64\bin;D:\apache-maven-3.6.0\bin;C:\Program Files (x86)\Java\jdk1.8.0_211\bin;C:\Program Files (x86)\Java\jdk1.8.0_211\jre\bin;C:\Program Files\nodejs\;E:\VanDyke Software\Clients\;D:\Python39;D:\Python39\Scripts;D:\Python39\Scripts\;D:\Python39\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm 2019.1.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin;;C:\Users\Admin\AppData\Roaming\npm;C:\Program Files (x86)\Calibre2;;.]
+2021-02-02 14:18:56.601 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2021-02-02 14:18:56.601 [main] INFO  org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 3658 ms
+2021-02-02 14:18:56.956 [main] INFO  org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-02-02 14:18:57.066 [main] INFO  org.hibernate.Version HHH000412: Hibernate Core {5.3.7.Final}
+2021-02-02 14:18:57.070 [main] INFO  org.hibernate.cfg.Environment HHH000206: hibernate.properties not found
+2021-02-02 14:18:57.319 [main] INFO  org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-02-02 14:18:57.533 [main] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2021-02-02 14:18:57.685 [main] INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2021-02-02 14:18:57.700 [main] INFO  org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-02 14:18:59.354 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 14:19:00.635 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator HHH000397: Using ASTQueryTranslatorFactory
+2021-02-02 14:19:02.107 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-02-02 14:19:02.382 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-02 14:19:02.696 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+2021-02-02 14:19:02.734 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+2021-02-02 14:19:02.783 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+2021-02-02 14:19:03.085 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: addUsingPOST_1
+2021-02-02 14:19:03.100 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: deleteAppUsingPOST_1
+2021-02-02 14:19:03.148 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: disableUsingPOST_1
+2021-02-02 14:19:03.151 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: getDisableStatusUsingGET_1
+2021-02-02 14:19:03.165 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: addUsingPOST_2
+2021-02-02 14:19:03.168 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: disableUsingPOST_2
+2021-02-02 14:19:03.170 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator Generating unique operation named: findContractsUsingGET_1
+2021-02-02 14:19:03.210 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+2021-02-02 14:19:03.251 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-02 14:19:03.255 [main] INFO  cn.mrray.raybaas.ca.CaApplication Started CaApplication in 12.501 seconds (JVM running for 14.634)
+2021-02-02 14:19:03.260 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [生成根证书---------------------]
+2021-02-02 14:19:03.544 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [生成RayBaas证书、Origin-SDK证书---------------------]
+2021-02-02 14:19:03.604 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [初始化http安全校验证书-----------------------]
+2021-02-02 14:19:03.609 [main] INFO  cn.mrray.raybaas.ca.init.StartInit [CA初始化完成---------------------]
+2021-02-02 14:19:22.654 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-02 14:19:22.654 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2021-02-02 14:19:22.668 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Completed initialization in 14 ms

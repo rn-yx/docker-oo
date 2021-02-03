@@ -4,7 +4,7 @@ services:
     image: jenkins/jenkins 
     container_name: myjenkins
     external_links:
-      - gitlab:gitlab.hibiscus.com 
+      - gitlab:gitlab.hibiscus.com
     restart: always
     ports:
       - '8080:8080'
