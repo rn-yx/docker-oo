@@ -17,14 +17,24 @@ services:
       ELASTIC_PASSWORD: elastic
       ES_JAVA_OPTS: "-Xms512m -Xmx512m"
 
+  kibana:
+    image: kibana:7.10.1
+    container_name: kibana
+    restart: always
+    ports:
+      - "5601:5601"
+    volumes:
+      - ../kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+    depends_on:
+      - elasticsearch
+
   logstash:
     image: logstash:7.10.1
     container_name: logstash
+    restart: always
     ports:
       - "5044:5044"
-      - "5000:5000/tcp"
-      - "5000:5000/udp"
-      - "9600:9600"
+      - "5045:5045"
     volumes:
       - ../logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ../logstash/pipeline:/usr/share/logstash/pipeline
@@ -33,15 +43,16 @@ services:
     depends_on:
       - elasticsearch
 
-  kibana:
-    image: kibana:7.10.1
-    container_name: kibana
-    ports:
-      - "5601:5601"
+  filebeat:
+    image: elastic/filebeat:7.10.1
+    container_name: filebeat
+    restart: always
     volumes:
-      - ../kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+      - ../filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ../filebeat/data/logs/:/data/logs/
+    user: root
     depends_on:
-      - elasticsearch
+      - logstash
 
 networks:
   default:
