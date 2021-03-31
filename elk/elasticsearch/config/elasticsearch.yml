@@ -1,6 +1,10 @@
 cluster.name: "docker-cluster"
 network.host: 0.0.0.0
 
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-headers: Authorization,X-Requested-With,Content-Type,Content-Length
+
 xpack.license.self_generated.type: trial
 xpack.security.enabled: true
 xpack.monitoring.collection.enabled: true

@@ -17,6 +17,16 @@ services:
       ELASTIC_PASSWORD: elastic
       ES_JAVA_OPTS: "-Xms512m -Xmx512m"
 
+  elasticsearch-head:
+    image: docker.io/tobias74/elasticsearch-head
+    container_name: elasticsearch-head
+    ports:
+      - "9100:9100"
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+
   kibana:
     image: kibana:7.10.1
     container_name: kibana
@@ -27,6 +37,8 @@ services:
       - ../kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
     depends_on:
       - elasticsearch
+    environment:
+      elasticsearch.hosts: http://elasticsearch:9200
 
   logstash:
     image: logstash:7.10.1
@@ -49,7 +61,8 @@ services:
     restart: always
     volumes:
       - ../filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-      - ../filebeat/data/logs/:/data/logs/
+      - "/var/lib/docker/containers:/usr/share/dockerlogs/data:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     user: root
     depends_on:
       - logstash
