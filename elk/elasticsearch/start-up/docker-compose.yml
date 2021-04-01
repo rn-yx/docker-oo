@@ -1,0 +1,33 @@
+version: '3.6'
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.10.1
+    container_name: elasticsearch
+    restart: always
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ../data:/usr/share/elasticsearch/data
+      - ../logs/:/usr/share/logs/
+      - ../config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    environment:
+      discovery.type: single-node
+      ELASTIC_PASSWORD: elastic
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+
+  elasticsearch-head:
+    image: docker.io/tobias74/elasticsearch-head
+    container_name: elasticsearch-head
+    ports:
+      - "9100:9100"
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+
+networks:
+  default:
+    external:
+      name: elk_net

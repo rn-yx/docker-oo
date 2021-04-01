@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+  filebeat:
+    image: elastic/filebeat:7.10.1
+    container_name: filebeat
+    restart: always
+    volumes:
+      - /opt/nginx/logs:/var/logs
+#      - ../logs:/usr/share/filebeat/logs
+#      - ../data:/usr/share/filebeat/data
+      - ../config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+    environment:
+      - strict.perms=false
+
+networks:
+  default:
+    external:
+      name: elk_net
