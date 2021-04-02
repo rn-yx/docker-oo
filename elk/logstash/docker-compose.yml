@@ -1,0 +1,20 @@
+version: '3.6'
+
+services:
+  logstash:
+    image: logstash:7.12.0
+    container_name: logstash
+    restart: always
+    ports:
+      - "5044:5044"
+      - "5045:5045"
+    volumes:
+      - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./pipeline:/usr/share/logstash/pipeline
+    environment:
+      LS_JAVA_OPTS: "-Xmx512m -Xms512m"
+
+networks:
+  default:
+    external:
+      name: elk_net

@@ -2,16 +2,16 @@ version: '3.6'
 
 services:
   elasticsearch:
-    image: elasticsearch:7.10.1
+    image: elasticsearch:7.12.0
     container_name: elasticsearch
     restart: always
     ports:
       - "9200:9200"
       - "9300:9300"
     volumes:
-      - ../data:/usr/share/elasticsearch/data
-      - ../logs/:/usr/share/logs/
-      - ../config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+      - ./data:/usr/share/elasticsearch/data
+      - ./logs/:/usr/share/logs/
+      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
     environment:
       discovery.type: single-node
       ELASTIC_PASSWORD: elastic
