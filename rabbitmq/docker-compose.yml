@@ -2,14 +2,14 @@ version: '3'
 
 services:
   rabbitmq:
-    image: rabbitmq:3.8-rc
+    image: rabbitmq:3.8.14-management
     container_name: rabbitmq
     restart: always
     ports:
       - "5672:5672"
       - "15672:15672"
     volumes:
-      - "../data:/var/lib/rabbitmq"
+      - "./data:/var/lib/rabbitmq"
     logging:
       driver: "json-file"
       options:
