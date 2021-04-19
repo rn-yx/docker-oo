@@ -2,7 +2,7 @@ global:
   smtp_smarthost: 'smtp.qiye.aliyun.com:25' #邮件服务器
   smtp_from: 'baas@rannuo.cn' #发邮件的邮箱
   smtp_auth_username: 'baas@rannuo.cn' #发邮件的邮箱用户名，也就是你的邮箱
-  smtp_auth_password: 'Bpwd2019_' #发邮件的邮箱密码
+  smtp_auth_password: 'XXX' #发邮件的邮箱密码
   smtp_require_tls: false #不进行tls验证
 
 route:
