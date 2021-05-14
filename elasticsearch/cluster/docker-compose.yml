@@ -1,0 +1,110 @@
+version: '3.6'
+
+services:
+  es-master:
+    image: elasticsearch:7.12.0
+    container_name: es-master
+    restart: always
+    privileged: true
+    ports:
+      - 9200:9200
+    volumes:
+      - ./data/node0:/usr/share/elasticsearch/data
+      - ./logs/node0:/usr/share/elasticsearch/logs
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    environment:
+      - cluster.name=es-cluster
+      - node.name=es-master
+      - node.master=true
+      - node.data=true
+      - bootstrap.memory_lock=true
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - cluster.initial_master_nodes=es-master,es-node1,es-node2
+      - TAKE_FILE_OWNERSHIP=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "discovery.zen.ping.unicast.hosts=es-master,es-node1,es-node2"
+      - "discovery.zen.minimum_master_nodes=2"
+    
+  es-node1:
+    image: elasticsearch:7.12.0
+    container_name: es-node1
+    restart: always
+    privileged: true
+    ports:
+      - 9201:9200
+    volumes:
+      - ./data/node1:/usr/share/elasticsearch/data
+      - ./logs/node1:/usr/share/elasticsearch/logs
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    environment:
+      - cluster.name=es-cluster
+      - node.name=es-node1
+      - node.master=true
+      - node.data=true
+      - bootstrap.memory_lock=true
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - cluster.initial_master_nodes=es-master,es-node1,es-node2
+      - TAKE_FILE_OWNERSHIP=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "discovery.zen.ping.unicast.hosts=es-master,es-node1,es-node2"
+      - "discovery.zen.minimum_master_nodes=2"
+
+  es-node2:
+    image: elasticsearch:7.12.0
+    container_name: es-node2
+    restart: always
+    privileged: true
+    ports:
+      - 9202:9200
+    volumes:
+      - ./data/node2:/usr/share/elasticsearch/data
+      - ./logs/node2:/usr/share/elasticsearch/logs
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    environment:
+      - cluster.name=es-cluster
+      - node.name=es-node2
+      - node.master=true
+      - node.data=true
+      - bootstrap.memory_lock=true
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - cluster.initial_master_nodes=es-master,es-node1,es-node2
+      - TAKE_FILE_OWNERSHIP=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "discovery.zen.ping.unicast.hosts=es-master,es-node1,es-node2"
+      - "discovery.zen.minimum_master_nodes=2"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.12.0
+    container_name: kibana
+    restart: always
+    ports:
+      - 5601:5601
+    environment:
+      - SERVER_NAME=kibana
+      - ELASTICSEARCH_URL=http://es-master:9200
+      - XPACK_MONITORING_ENABLED=true
+    depends_on:
+      - es-master
+
+  elasticsearch-head:
+    image: docker.io/tobias74/elasticsearch-head
+    container_name: elasticsearch-head
+    restart: always
+    ports:
+      - "9100:9100"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es-master:9200
+    depends_on:
+      - es-master

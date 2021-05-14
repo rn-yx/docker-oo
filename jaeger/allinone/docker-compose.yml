@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+  jaeger-all-in-one:
+    image: jaegertracing/all-in-one:latest
+    restart: always
+    ports:
+      - "5775:5775/udp"
+      - "16686:16686"
